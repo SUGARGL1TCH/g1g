@@ -1,0 +1,70 @@
+characters:
+  narrator:
+    name: "Narrator"
+    # color: "#FFFFFF" # You could add metadata like text color
+  yuki:
+    name: "Yuki"
+    # image: "yuki_neutral.png" # Or default character sprite
+  kenji:
+    name: "Kenji"
+    # image: "kenji_happy.png"
+
+# The story begins at the scene with id 'start'.
+scenes:
+  start:
+    id: start
+    background: classroom_day.png
+    dialogue:
+      - character: narrator
+        text: "The bell rings, signaling the end of another long day at school."
+      - character: narrator
+        text: "As you pack your bag, you see Yuki, the quiet transfer student, looking out the window."
+      - character: narrator
+        text: "She seems a little lonely. What will you do?"
+    choices:
+      - text: "Approach her and say hello."
+        goto: talk_to_yuki
+      - text: "Just leave. It's none of your business."
+        goto: go_home_alone
+
+  talk_to_yuki:
+    id: talk_to_yuki
+    background: classroom_sunset.png
+    dialogue:
+      - character: kenji
+        text: "Hey, are you heading home? I'm Kenji."
+      - character: yuki
+        text: "Oh! Hi. I'm Yuki. I was just... thinking."
+      - character: kenji
+        text: "If you want, we could walk to the station together?"
+      - character: yuki
+        text: "I'd like that. Thank you."
+    # This scene has no choices, it directly transitions to the next one.
+    goto: ending_friendship
+
+  go_home_alone:
+    id: go_home_alone
+    background: school_gate_sunset.png
+    dialogue:
+      - character: narrator
+        text: "You decide to leave her be. Everyone has their own things to deal with."
+      - character: narrator
+        text: "You walk home alone, the setting sun casting a long shadow before you."
+    goto: ending_neutral
+
+  ending_friendship:
+    id: ending_friendship
+    background: street_sunset.png
+    dialogue:
+      - character: narrator
+        text: "You and Yuki chat on the way to the station. You learn she's a fan of the same video games as you."
+      - character: narrator
+        text: "This feels like the beginning of a good friendship. END."
+    # This is a terminal scene. There is no 'goto' or 'choices'.
+
+  ending_neutral:
+    id: ending_neutral
+    background: empty_street.png
+    dialogue:
+      - character: narrator
+        text: "The day ends as it always does. Nothing has changed. END."
