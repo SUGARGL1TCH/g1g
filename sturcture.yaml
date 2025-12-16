@@ -1,13 +1,16 @@
 characters:
   narrator:
     name: "Narrator"
-    # color: "#FFFFFF" # You could add metadata like text color
+    description: ""
   yuki:
     name: "Yuki"
-    # image: "yuki_neutral.png" # Or default character sprite
+    description: "poor, nice, hardworking"
+  Haruhi:
+    name: "Haruhi"
+    description: "Yuki's mother, sick"
   kenji:
     name: "Kenji"
-    # image: "kenji_happy.png"
+    description: "rich, friendly, lazy"
 
 # The story begins at the scene with id 'start'.
 scenes:
