@@ -1,18 +1,36 @@
 characters:
-  narrator
+  - narrator
     role: "narrator"
-  main
+  - main
     role: "player"
-  mom
+  - mom
     role : "mom"
-  valenda
+  - valenda
     role : "waitress"
-  cadol
+  - cadol
     role : "waiter"
-  canaisa 
+  - canaisa 
     role : "cadol's little sister"
-  id : kurt
+  - kurt
     role : "player's little brother"
+
+scenes:
+  - classroom desk
+  - poor city
+    description : "trashy, dim lightning, tight street"
+  - coffee
+    description : "cozy place, good lightning, standard decoration"
+  - outside of the coffee
+    description : "lightning, chairs and tables, small street"
+  - house
+    description : "bedroom, one kitchen and a lavatory"
+  - house’s bedroom
+  - outside of house
+    description: creepy and eerie vibes
+
+
+
+
 
 # The story begins at the scene with id 'start'.
 scenes: 
