@@ -14,6 +14,11 @@ characters:
   - kurt
     role : "player's little brother"
 
+Points:
+  -Health
+  -Affection
+  -Money
+
 scenes:
   - classroom desk
     background : "classroom.png"
@@ -31,38 +36,87 @@ scenes:
   - outside of house
     description: creepy and eerie vibes
 
-
-
-
+chapters
+  - chapter 1
+    - act 1-1
+    - act 1-2
+    - act 1-3
+  - chapter 2
+  - chapter 3
+  - ending 1
+  - ending 2
 
 # The story begins at the scene with id 'start'.
-scenes: 
-  start:
-    id: start
-    background: classroom_day.png
+acts
+  id : act 1-1
+    scene : classroom desk
     dialogue:
-      - character: MC
-        text: "It was another boring day in math class where i was daydreaming, because what if I suddenly becam poor? I mean, I wouldn't have to go to school and...WOW"
-
+      - main : "It was another boring day in math class where i was daydreaming, because what if I suddenly becam poor? I mean, I wouldn't have to go to school and...WOW"
+    transitions :
+      act 1-2
     # This scene has no choices, it directly transitions to the next one.
-  
+    id : act 1-2
+      scene : house
     background: House_1.png
-    dialogue:
-      - character: Mom
-        text: "Hi sweetie, Where were you?"
+    Dialogue:
+      -Mom: "Hi sweetie, Where were you?"
     Choices:
        >"I was at work" 
-          goto: - character: Mom 
-                  text: "Great, now you can help your brother with math homework"
+          goto: -mom: "Great, now you can help your brother with math homework"
        >"Where am I?"
-           goto: - character: Mom
-                  text: "You are home? I don't know what to tell you."
-                  - character: ?????
-                  text:
+           goto: -mom: "You are home? I don't know what to tell you."
+                 -????(narrator): "You are not home! But i can help you esca-..."
+                 -mom: "Anyway, can you go help your brother with his homework?"
+    Dialogue: 
+      -main : Exercies? Brother? Where the heck was I? What is this place? And what am i supposed to do?
+      -narratore : "Hello deary"
+      -main : "AND WHAT WAS THAT???"
+      -main : "I get it you are very confused and troubled right now, but if you follow me i will help you"
+      -main : "I'm sorry but WHAT?!"
+      -narrator : "Do not worry, I am here to guide you in this simulaion. Everyday, a random person dreaming of poverty gets teleported here. I will be the voice helping you escape, Oh and 
+      when you go to the coffee shop, make sure not to trust-...!"
+      -main : That voice was cut off by the screams of my so called brother
+      -main : I make my way to the bedroom
+   transitions :
+     act 1-3
+    #This scene directly transitions onto the next one.
+    id : act 1-3
+      scene : house bedroom
+    background : House_bedroom
+    Dialogue:
+      -Kurt : Hey!!! can you please help me with my math homework?
+    Choices:
+      >"Yeah i got you!"
+          goto : -Kurt : Yeah! thanks
+          
+      >"I'm not that good in math, Sorry!"
+    
+    
+        
 
 
 
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   ending_friendship:
